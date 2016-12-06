@@ -67,25 +67,31 @@ public class UserProfileForm extends ActionForm {
         validateEmpty("mobile", mobile, errors);
         validateEmpty("password", password, errors);
 
-        validateEmail(email, errors);
-        validatePassword(password, errors);
+        validateEmail(errors);
+        validatePassword(errors);
+        validateMobile(errors);
 
         return errors;
     }
 
+    private void validateMobile(ActionErrors errors) {
+        if (mobile == null || mobile.length() != 10)
+            errors.add("mobile", new ActionMessage("errors.mobile"));
+    }
+
     private void validateEmpty(String propName, String propValue, ActionErrors errors) {
         if (propValue == null || propValue.length() == 0)
-            errors.add(propName, new ActionMessage(propName + " " + "cannot be empty."));
+            errors.add(propName, new ActionMessage("errors.null", propName));
     }
 
-    private void validateEmail(String email, ActionErrors errors) {
+    private void validateEmail(ActionErrors errors) {
         if (email == null || !email.contains("@"))
-            errors.add("email", new ActionMessage("Invalid email address"));
+            errors.add("email", new ActionMessage("errors.email", email));
     }
 
-    private void validatePassword(String password, ActionErrors errors) {
+    private void validatePassword(ActionErrors errors) {
         if (password == null || password.length() < 8)
-            errors.add("Password", new ActionMessage("Password should have minimum of 8 characters"));
+            errors.add("password", new ActionMessage("errors.password"));
     }
 
 }

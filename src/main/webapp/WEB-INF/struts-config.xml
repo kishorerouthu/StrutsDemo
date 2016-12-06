@@ -10,13 +10,12 @@
         <form-bean name="userProfileForm" type="com.tutorial.struts.form.UserProfileForm"/>
     </form-beans>
 
-    <global-forwards>
-        <forward name="editUserPage" path="/EditUser.jsp"/>
-    </global-forwards>
-
     <action-mappings>
 
-        <action path="/editUser" name="userProfileForm" scope="session"  forward="editUserPage.do" />
+        <action
+                path="/editUser"
+                type="org.apache.struts.actions.ForwardAction"
+                parameter="/EditUser.jsp"/>
 
         <action path="/helloWorld"
                 type="com.tutorial.struts.action.HelloWorldAction"
@@ -29,9 +28,11 @@
                 name="userProfileForm"
                 validate="true"
                 input="/EditUser.jsp">
-            <forward name="sucess" path="/ShowUser.jsp"/>
+            <forward name="success" path="/ShowUser.jsp"/>
         </action>
 
     </action-mappings>
+
+    <message-resources parameter="MessageResource"/>
 
 </struts-config>

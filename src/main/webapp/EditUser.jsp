@@ -7,35 +7,38 @@
     <title>User Profile</title>
 </head>
 <body>
-<b>Feedback Form</b>
+<b>User Registration Form</b>
 <hr>
-<html:errors/>
+
 <html:form action="/userProfile">
 <table>
+    <tr>
+        <td colspan="2" style="color:red"><html:errors/></td>
+    </tr>
 
     <tr>
         <td>FirstName :</td>
-        <td><html:text name="helloWorldForm" property="firstName" /></td>
+        <td><html:text name="userProfileForm" property="firstName" /></td>
     </tr>
 
     <tr>
         <td>LastName :</td>
-        <td><html:text name="helloWorldForm" property="lastName"/></td>
+        <td><html:text name="userProfileForm" property="lastName"/></td>
     </tr>
 
     <tr>
         <td>Email :</td>
-        <td><html:text name="helloWorldForm" property="email"/></td>
+        <td><html:text name="userProfileForm" property="email"/></td>
      </tr>
 
      <tr>
          <td>Mobile :</td>
-         <td><html:text name="helloWorldForm" property="mobile"/></td>
+         <td><html:text name="userProfileForm" property="mobile"/></td>
       </tr>
 
        <tr>
             <td>Password :</td>
-            <td><html:password name="helloWorldForm" property="password"/></td>
+            <td><html:password name="userProfileForm" property="password"/></td>
        </tr>
 
     <tr>

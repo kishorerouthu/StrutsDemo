@@ -5,8 +5,9 @@
 <head>
 </head>
 <body>
-<center>
-<h1> User Profile Data </h1>
+
+<b>User Profile Data</b>
+<hr>
     <table>
     <tr>
         <td><bean:write name="userProfileForm" property="firstName" /></td>
@@ -29,6 +30,6 @@
     </tr>
 
     </table>
-</center>
+
 </body>
 </html>
