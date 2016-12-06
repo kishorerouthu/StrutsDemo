@@ -10,8 +10,10 @@
   </welcome-file-list>
 
   <servlet>
+
     <servlet-name>action</servlet-name>
     <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+
     <init-param>
       <param-name>config</param-name>
       <param-value>/WEB-INF/struts-config.xml</param-value>
@@ -23,6 +25,24 @@
     <servlet-name>action</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
+
+
+  <!--/hello.do - HelloAction - HelloForm
+                              - message
+  /profile.do - ProfileSaveActin   - HttpRequest -parameters
+                          - UserProfileForm
+                              -Username
+                              - email
+                              -password
+                              - mobile
+
+  /getdata.do - GetDatAction
+
+  Scopes
+  *********
+  request - single request
+  session - multiple requests (for user)
+  context - Entire application-->
 
 
 </web-app>
