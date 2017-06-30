@@ -1,6 +1,6 @@
-package com.tutorial.struts.action;
+package com.css.struts.action;
 
-import com.tutorial.struts.form.HelloWorldForm;
+import com.css.struts.form.HelloWorldForm;
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;

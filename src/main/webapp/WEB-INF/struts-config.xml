@@ -6,8 +6,8 @@
 <struts-config>
 
     <form-beans>
-        <form-bean name="helloWorldForm" type="com.tutorial.struts.form.HelloWorldForm"/>
-        <form-bean name="userProfileForm" type="com.tutorial.struts.form.UserProfileForm"/>
+        <form-bean name="helloWorldForm" type="com.css.struts.form.HelloWorldForm"/>
+        <form-bean name="userProfileForm" type="com.css.struts.form.UserProfileForm"/>
     </form-beans>
 
     <action-mappings>
@@ -18,13 +18,13 @@
                 parameter="/EditUser.jsp"/>
 
         <action path="/helloWorld"
-                type="com.tutorial.struts.action.HelloWorldAction"
+                type="com.css.struts.action.HelloWorldAction"
                 name="helloWorldForm">
             <forward name="success" path="/HelloWorld.jsp"/>
         </action>
 
         <action path="/userProfile"
-                type="com.tutorial.struts.action.UserProfileAction"
+                type="com.css.struts.action.UserProfileAction"
                 name="userProfileForm"
                 validate="true"
                 input="/EditUser.jsp">
